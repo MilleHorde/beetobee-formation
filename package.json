@@ -1,0 +1,35 @@
+{
+  "name": "beetobee-formation",
+  "version": "1.0.0",
+  "description": "BEER API example for use node.js during formation of 21/12/2017",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive test --reporter spec --exit",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MilleHorde/beetobee-formation.git"
+  },
+  "author": "MilleHorde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MilleHorde/beetobee-formation/issues"
+  },
+  "homepage": "https://github.com/MilleHorde/beetobee-formation#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "http": "^0.0.0",
+    "mocha": "^4.0.1",
+    "mongoose": "^4.13.7",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.4.5",
+    "socket.io": "^2.0.4"
+  }
+}

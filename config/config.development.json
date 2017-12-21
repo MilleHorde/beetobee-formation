@@ -1,0 +1,11 @@
+{
+  "database":{
+    "host": "127.0.0.1",
+    "name": "beerAPI_dev"
+  },
+  "title": "Beer API",
+  "port": "3010",
+  "socket": {
+    "host" : "http://localhost:3010"
+  }
+}
