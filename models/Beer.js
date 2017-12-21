@@ -4,10 +4,10 @@ const mongoose = require('mongoose');
 let label = "Beer";
 
 let schema = new mongoose.Schema({
-  name: {type: String, required: true},
+  name: {type: String, required: true, unique: true},
   description: {type: String, maxLength: 500},
   priceCts: {type: Number, default: 0, required: true},
-  country: {type: String},
+  country: String,
   alcoholPercent: {type: Number, required: true},
   vote: {type: Number, default: 0},
   created: {type: Date, default: Date.now()},

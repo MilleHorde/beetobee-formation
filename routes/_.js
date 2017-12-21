@@ -12,7 +12,7 @@ const config = require('../config');
  *
  * @apiSuccess {Object} contain title of API.
  */
-router.get('/', function (req, res, next) {
+router.get('/', (req, res, next) => {
   res.send({title: config.title});
 });
 

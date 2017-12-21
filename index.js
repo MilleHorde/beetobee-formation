@@ -1,17 +1,12 @@
 "use strict";
 //Require modules
-const express = require('express');
+const express = require('express');//
 const path = require('path');
-const favicon = require('serve-favicon');
 const logger = require('morgan');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');//
+const bodyParser = require('body-parser');//
 const cors = require('cors');
-const http = require('http');
-
-//Require controllers
-const index = require('./routes/_');
-const beers = require('./routes/beers');
+const http = require('http');//
 
 //Require tools
 const config = require('./config');
@@ -66,6 +61,7 @@ let onListening = (server) => {
 };
 
 let app = express();
+//let port = 8080;
 let port = normalizePort(config.port);
 
 // view engine setup
@@ -81,7 +77,7 @@ app.use(cors());
 if (process.env.NODE_ENV !== 'test') {
   app.use(logger('dev'));
 }
-app.use(bodyParser.json({limit: '10mb'}));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -90,6 +86,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Load Models
 require('./models').load(app, {useMongoClient: true});
 
+
+
+//Require controllers
+const index = require('./routes/_');
+const beers = require('./routes/beers');
 //Set up controllers to routes
 app.use('/', index);
 app.use('/beers', beers);

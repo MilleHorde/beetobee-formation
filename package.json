@@ -4,7 +4,7 @@
   "description": "BEER API example for use node.js during formation of 21/12/2017",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --recursive test --reporter spec --exit",
+    "test": "mocha --recursive test --reporter spec --exit",
     "start": "node index.js"
   },
   "repository": {
